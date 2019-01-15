@@ -1,7 +1,8 @@
 FROM python:3.7-slim
 
 RUN python -m pip install munch --prefer-binary
-RUN python -m pip install rasterio fiona --only-binary :all:
+RUN python -m pip install "rasterio==1.0.13" --only-binary :all:
+RUN python -m pip install "fiona==1.8.4" --only-binary :all:
 
 WORKDIR /src
 COPY . /src/
